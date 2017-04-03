@@ -1,0 +1,26 @@
+<html>
+<head>
+    {% load staticfiles %}
+<title>{{ puzzle.title }}</title>
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/wiseley/javascript-crossword/master/style.css" />
+<script type="text/javascript" src="https://rawgit.com/wiseley/javascript-crossword/master/lib/jquery.min.js"></script>
+<script type="text/javascript" src="https://rawgit.com/wiseley/javascript-crossword/master/lib/jquery.hotkeys.js"></script>
+<script type="text/javascript" src="https://rawgit.com/wiseley/javascript-crossword/master/lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="{% static 'js/crossword.js' %}"></script>
+<script type="text/javascript">
+  var crossw1rd1;
+  //var crossw1rd2;
+  $(document).ready(function() {
+    crossw1rd1 = new Crossw1rd('container1');
+    crossw1rd1.init('puzzle');
+  });
+</script>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>{{ puzzle.title }}</h1>
+<div id="container1"></div>
+<br/>
+<a href="{% url 'puzzle:pdf' puzzle.UUID %}">get pdf</a>
+</body>
+</html>

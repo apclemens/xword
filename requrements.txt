@@ -1,0 +1,15 @@
+appdirs==1.4.3
+beautifulsoup4==4.5.3
+click==6.7
+Django==1.10.6
+futures==3.0.5
+goslate==1.5.1
+olefile==0.44
+packaging==16.8
+Pillow==4.0.0
+PyDictionary==1.5.2
+pyparsing==2.2.0
+reportlab==3.4.0
+requests==2.13.0
+six==1.10.0
+wikipedia==1.4.0

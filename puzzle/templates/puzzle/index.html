@@ -1,0 +1,15 @@
+<html>
+<head>
+    {% load staticfiles %}
+<title>All crosswords</title>
+<meta charset="UTF-8">
+</head>
+<body>
+    <a href="{% url 'puzzle:builder' %}">Build a puzzle</a>
+    <ul>
+    {% for puzzle in puzzles %}
+        <li><a href="{% url 'puzzle:play' puzzle.UUID %}">{{puzzle.title}}</a> - {{puzzle.size}}</li>
+    {% endfor %}
+        </ul>
+</body>
+</html>
